@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import logoImg from '../assets/logo.jpeg';
-import './splashView.css';
+import './SplashView.css';
 export default function SplashView({ onComplete }) {
   useEffect(() => {
     const timer = setTimeout(() => {
