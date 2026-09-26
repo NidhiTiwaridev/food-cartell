@@ -1,0 +1,228 @@
+.offer-overlay {
+position: fixed;
+inset: 0;
+z-index: 10000;
+background: rgba(10, 10, 10, 0.78);
+backdrop-filter: blur(7px);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+animation: offerFade 0.3s ease;
+}
+
+.offer-modal {
+position: relative;
+width: 100%;
+max-width: 410px;
+padding: 35px 30px 25px;
+text-align: center;
+color: #f8f3e7;
+background: linear-gradient(145deg, #25231f, #121212);
+border: 1px solid rgba(212, 175, 55, 0.6);
+border-radius: 22px;
+box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+animation: offerSlide 0.4s ease;
+overflow: hidden;
+}
+
+.offer-modal::before {
+content: "";
+position: absolute;
+width: 230px;
+height: 230px;
+border-radius: 50%;
+background: rgba(212, 175, 55, 0.08);
+top: -130px;
+left: -90px;
+pointer-events: none;
+}
+
+.offer-close {
+position: absolute;
+top: 12px;
+right: 17px;
+border: none;
+background: transparent;
+color: #d4af37;
+font-size: 30px;
+cursor: pointer;
+z-index: 2;
+}
+
+.offer-close:hover {
+color: white;
+transform: rotate(90deg);
+}
+
+.offer-top {
+position: relative;
+}
+
+.offer-tag {
+display: inline-block;
+padding: 7px 14px;
+border: 1px solid #d4af37;
+border-radius: 30px;
+color: #e6c75a;
+font-size: 10px;
+letter-spacing: 3px;
+font-weight: 700;
+}
+
+.offer-icon {
+margin: 18px auto 8px;
+color: #d4af37;
+font-size: 32px;
+}
+
+.offer-subtitle {
+margin: 0;
+color: #d4af37;
+font-size: 10px;
+letter-spacing: 3px;
+font-weight: 600;
+}
+
+.offer-top h2 {
+margin: 12px 0;
+font-family: Georgia, serif;
+font-size: 32px;
+line-height: 1.2;
+font-weight: 500;
+}
+
+.offer-top h2 span {
+color: #e3bd4c;
+font-style: italic;
+}
+
+.offer-description {
+margin: 12px auto 18px;
+max-width: 290px;
+color: #c5c0b5;
+font-size: 13px;
+line-height: 1.6;
+}
+
+.offer-discount {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
+color: #e6c75a;
+}
+
+.discount-number {
+font-family: Georgia, serif;
+font-size: 66px;
+line-height: 1;
+font-weight: bold;
+}
+
+.discount-text {
+font-size: 23px;
+font-weight: 700;
+}
+
+.offer-details {
+margin: 5px 0 18px;
+color: #f8f3e7;
+font-size: 13px;
+}
+
+.offer-code {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+padding: 12px;
+margin: 0 auto 20px;
+max-width: 250px;
+border: 1px dashed #d4af37;
+border-radius: 8px;
+background: rgba(212, 175, 55, 0.07);
+}
+
+.offer-code span {
+color: #b9b2a2;
+font-size: 10px;
+letter-spacing: 1px;
+}
+
+.offer-code strong {
+color: #e6c75a;
+font-size: 14px;
+letter-spacing: 1px;
+}
+
+.offer-claim {
+width: 100%;
+padding: 15px;
+border: none;
+border-radius: 30px;
+background: linear-gradient(90deg, #b68b28, #f0d778);
+color: #17130a;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.5px;
+cursor: pointer;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-claim span {
+margin-left: 8px;
+font-size: 17px;
+}
+
+.offer-claim:hover {
+transform: translateY(-2px);
+box-shadow: 0 7px 20px rgba(212, 175, 55, 0.3);
+}
+
+.offer-footer {
+margin: 15px 0 0;
+color: #888277;
+font-size: 9px;
+}
+
+@keyframes offerFade {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+@keyframes offerSlide {
+from {
+opacity: 0;
+transform: translateY(25px) scale(0.95);
+}
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
+
+@media (max-width: 480px) {
+.offer-modal {
+padding: 32px 22px 22px;
+}
+
+.offer-top h2 {
+font-size: 28px;
+}
+
+.discount-number {
+font-size: 56px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.offer-overlay,
+.offer-modal {
+animation: none;
+}
+}
