@@ -4,8 +4,8 @@ import "./WhatsAppButton.css";
 const WhatsAppButton = () => {
 const [isOpen, setIsOpen] = useState(false);
 
-// Apna WhatsApp number yahan daalein
-const phoneNumber = "917000770716";
+
+const phoneNumber = "919876543210";
 
 const message = encodeURIComponent(
 "Hello Food Cartell! I want to know about your menu and offers."
